@@ -1,0 +1,4 @@
+<launch>
+<node name="proj_img_to_pc" pkg="boxy_base" type="proj_img_to_pc"
+launch-prefix="xterm -e gdb --args"/>
+</launch>

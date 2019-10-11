@@ -1,0 +1,15 @@
+<launch>
+<include file="$(find realsense2_camera)/launch/rs_t265.launch">
+</include>
+<include file="$(find rplidar_ros)/launch/rplidar.launch" />
+<node name="boxy_tf" pkg="boxy_base" type="boxy_tf" />
+<include file="$(find boxy_base)/other/usb_cam.launch" />
+
+<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find boxy_base)/urdf/model.xacro'"/>
+<!--<node name="rviz" pkg="rviz" type="rviz" args="-d /home/arc/.rviz/default.rviz" />-->
+
+<group ns="usb_cam">
+<node name="image_proc" pkg="image_proc" type="image_proc" />
+</group>
+
+</launch>
