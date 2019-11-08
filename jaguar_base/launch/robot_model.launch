@@ -1,0 +1,13 @@
+<launch>
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find boxy_base)/urdf/model.xacro'"/>
+
+  <!-- Combine joint values -->
+<!--  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/> -->
+
+  <!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/arc/.rviz/default.rviz" />
+
+
+
+</launch>

@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<robot name="Boxy" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<material name="blue">
+  <color rgba="0 0 0.8 1"/>
+</material>
+<material name="black">
+  <color rgba="0 0 0 1"/>
+</material>
+<material name="white">
+  <color rgba="1 1 1 1"/>
+</material>
+
+<link name="base_link">
+    <visual>
+      <origin rpy="1.5708 0 0" xyz="-1 1.2 -0.83"/>
+      <geometry>
+        <mesh filename="package://boxy_base/meshes/Jaguar.dae"/>
+        <!--<meshscale="0.1 0.1 0.1"/> -->
+      </geometry>
+      <material name="white"/>
+    </visual>
+</link>
+
+</robot>
